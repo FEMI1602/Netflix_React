@@ -33,3 +33,9 @@
 .smallPoster:hover{
     transform: scale(1.09);
 }
+
+.titles{
+    color: #fff;
+    margin-right: 10px;
+    display: -webkit-flex;
+}

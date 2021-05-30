@@ -4,7 +4,7 @@ import Youtube from 'react-youtube'
 import axios from '../../axios'
 import {API_KEY,imageUrl} from '../../constants/constants'
 
-function Rowpost(props) {
+function RowTitle(props) {
     const [movies, setMovies] = useState([])
     const [urlid,setUrlID]=useState('')
     useEffect(() => {
@@ -35,20 +35,7 @@ function Rowpost(props) {
             }
         })
     }
-    // const titlemovie=[
-    //     {
-    //         id:1,
-    //         title:'Dragons'
-    //     },
-    //     {
-    //         id:2,
-    //         title:'Dragons'
-    //     },
-    //     {
-    //         id:3,
-    //         title:'Dragons'
-    //     }
-    // ]
+ 
 
     return (
         <div className="row">
@@ -56,8 +43,8 @@ function Rowpost(props) {
             <div className="posters">
 
                {movies.map((obj)=>
-                   <img onClick={()=>handleMovie(obj.id)} className={props.isSmall ? 'smallPoster': "poster"} src={`${imageUrl+obj.backdrop_path}`} alt="poster" />
-                //    <h1>{obj.title}</h1>
+                //    <img onClick={()=>handleMovie(obj.id)} className={props.isSmall ? 'smallPoster': "poster"} src={`${imageUrl+obj.backdrop_path}`} alt="poster" />
+                   <h1 className="titles">{obj.title}</h1>
                )}
 
 
@@ -68,4 +55,4 @@ function Rowpost(props) {
     )
 }
 
-export default Rowpost
+export default RowTitle
